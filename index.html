@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiCraft Labs | Consulting en Intelligence Artificielle - Monastir, Tunisie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 50%, #4776E6 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+        .tech-icon:hover {
+            transform: scale(1.2);
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(110, 72, 170, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(110, 72, 170, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(110, 72, 170, 0);
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6e48aa, #4776E6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center mr-3">
+                    <i class="fas fa-robot text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold gradient-text">AiCraft Labs</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#accueil" class="text-purple-600 font-medium hover:text-purple-800 transition">Accueil</a>
+                <a href="#services" class="text-gray-600 hover:text-purple-600 transition">Services</a>
+                <a href="#expertise" class="text-gray-600 hover:text-purple-600 transition">Expertise</a>
+                <a href="#apropos" class="text-gray-600 hover:text-purple-600 transition">À propos</a>
+                <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-purple-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#accueil" class="text-purple-600 font-medium hover:text-purple-800 transition">Accueil</a>
+                <a href="#services" class="text-gray-600 hover:text-purple-600 transition">Services</a>
+                <a href="#expertise" class="text-gray-600 hover:text-purple-600 transition">Expertise</a>
+                <a href="#apropos" class="text-gray-600 hover:text-purple-600 transition">À propos</a>
+                <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
+                <a href="tel:+21612345678" class="bg-purple-600 text-white px-4 py-2 rounded-md text-center font-medium hover:bg-purple-700 transition mt-2">
+                    <i class="fas fa-phone mr-2"></i> Appelez-nous
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-24">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Transformez votre entreprise avec <span class="gradient-text bg-white">l'IA</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        AiCraft Labs vous accompagne dans votre transformation digitale grâce à des solutions d'intelligence artificielle sur mesure.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-md text-lg font-semibold transition flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i> Demander un devis
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-md text-lg font-semibold transition flex items-center justify-center">
+                            <i class="fas fa-search mr-2"></i> Nos services
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IA et innovation" class="rounded-xl shadow-2xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-center text-gray-500 text-sm uppercase font-bold mb-8">Ils nous font confiance</h2>
+            <div class="flex flex-wrap justify-center items-center gap-12">
+                <div class="h-12 grayscale hover:grayscale-0 transition">
+                    <img src="https://via.placeholder.com/150x60?text=Client+1" alt="Client 1" class="h-full">
+                </div>
+                <div class="h-12 grayscale hover:grayscale-0 transition">
+                    <img src="https://via.placeholder.com/150x60?text=Client+2" alt="Client 2" class="h-full">
+                </div>
+                <div class="h-12 grayscale hover:grayscale-0 transition">
+                    <img src="https://via.placeholder.com/150x60?text=Client+3" alt="Client 3" class="h-full">
+                </div>
+                <div class="h-12 grayscale hover:grayscale-0 transition">
+                    <img src="https://via.placeholder.com/150x60?text=Client+4" alt="Client 4" class="h-full">
+                </div>
+                <div class="h-12 grayscale hover:grayscale-0 transition">
+                    <img src="https://via.placeholder.com/150x60?text=Client+5" alt="Client 5" class="h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-sm uppercase tracking-wider text-purple-600 font-bold">Nos Services</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Solutions d'IA sur mesure</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nous concevons et déployons des solutions d'intelligence artificielle adaptées à vos besoins spécifiques.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-brain text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Stratégie IA</h3>
+                        <p class="text-gray-600 mb-4">Nous vous aidons à définir une stratégie d'IA alignée avec vos objectifs business.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Audit de maturité IA</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Roadmap technologique</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-500 mt-1 mr-2"></i>
+                                <span>Analyse ROI</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Data Science</h3>
+                        <p class="text-gray-600 mb-4">Extrayez des insights précieux de vos données grâce à nos modèles prédictifs.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Analyse prédictive</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Machine Learning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Visualisation de données</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-cyan-500 to-green-500 flex items-center justify-center">
+                        <i class="fas fa-comments text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">NLP & Chatbots</h3>
+                        <p class="text-gray-600 mb-4">Améliorez l'expérience client avec nos solutions de traitement du langage naturel.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-cyan-500 mt-1 mr-2"></i>
+                                <span>Chatbots intelligents</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-cyan-500 mt-1 mr-2"></i>
+                                <span>Analyse de sentiment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-cyan-500 mt-1 mr-2"></i>
+                                <span>Traduction automatique</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-sm uppercase tracking-wider text-purple-600 font-bold">Notre Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Technologies maîtrisées</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Nous utilisons les dernières technologies pour développer des solutions innovantes.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="tech-icon flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-12 w-12 mb-3" alt="Python">
+                    <span class="text-sm font-medium">Python</span>
+                </div>
+                <div class="tech-icon flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="h-12 w-12 mb-3" alt="TensorFlow">
+                    <span class="text-sm font-medium">TensorFlow</span>
+                </div>
+                <div class="tech-icon flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" class="h-12 w-12 mb-3" alt="PyTorch">
+                    <span class="text-sm font-medium">PyTorch</span>
+                </div>
+                <div class="tech-icon flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" class="h-12 w-12 mb-3" alt="OpenCV">
+                    <span class="text-sm font-medium">OpenCV</span>
+                </div>
+                <div class="tech-icon flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="h-12 w-12 mb-3" alt="Docker">
+                    <span class="text-sm font-medium">Docker</span>
+                </div>
+                <div class="tech-icon flex flex-col items-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" class="h-12 w-12 mb-3" alt="Kubernetes">
+                    <span class="text-sm font-medium">Kubernetes</span>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Notre approche</h3>
+                    <p class="text-gray-600 mb-6">
+                        Chez AiCraft Labs, nous combinons expertise technique et compréhension business pour développer des solutions d'IA qui créent de la valeur réelle pour votre entreprise.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Innovation</h4>
+                                <p class="text-gray-600">Nous restons à la pointe des dernières avancées en IA pour vous proposer des solutions innovantes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-cogs text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Personnalisation</h4>
+                                <p class="text-gray-600">Chaque solution est adaptée à vos besoins spécifiques et à votre environnement technologique.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-cyan-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-chart-line text-cyan-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Résultats</h4>
+                                <p class="text-gray-600">Nous mesurons l'impact de nos solutions pour garantir un retour sur investissement optimal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl p-1">
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Cas d'utilisation</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-shopping-cart text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">E-commerce</h4>
+                                    <p class="text-gray-600">Recommandation personnalisée, détection de fraude, service client automatisé.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-heartbeat text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Santé</h4>
+                                    <p class="text-gray-600">Diagnostic assisté, analyse d'images médicales, recherche clinique.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-cyan-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-industry text-cyan-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Industrie</h4>
+                                    <p class="text-gray-600">Maintenance prédictive, contrôle qualité automatisé, optimisation de la chaîne logistique.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <span class="text-sm uppercase tracking-wider text-purple-600 font-bold">À propos</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">AiCraft Labs</h2>
+                    <p class="text-gray-600 mb-6">
+                        Fondée à Monastir, Tunisie, AiCraft Labs est une entreprise spécialisée dans le conseil et le développement de solutions d'intelligence artificielle pour les entreprises.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Notre équipe d'experts en data science et ingénieurs en machine learning accompagne les organisations dans leur transformation digitale grâce à des technologies d'IA innovantes.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-purple-600 mb-1">50+</div>
+                            <div class="text-gray-600 text-sm">Projets réalisés</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-blue-600 mb-1">15+</div>
+                            <div class="text-gray-600 text-sm">Clients satisfaits</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-cyan-600 mb-1">10+</div>
+                            <div class="text-gray-600 text-sm">Experts IA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Équipe AiCraft Labs" class="rounded-xl shadow-lg w-full">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg hidden lg:block">
+                            <div class="flex items-center">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-trophy text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Prix de l'innovation 2022</h4>
+                                    <p class="text-gray-600 text-sm">Meilleure startup IA en Tunisie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-sm uppercase tracking-wider font-bold opacity-80">Témoignages</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Ce que disent nos clients</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <img class="h-12 w-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        <div>
+                            <h4 class="font-bold">Mohamed Ben Ali</h4>
+                            <p class="text-sm opacity-80">Directeur Technique, Entreprise X</p>
+                        </div>
+                    </div>
+                    <p class="italic opacity-90">
+                        "AiCraft Labs a révolutionné notre approche de la relation client avec leur solution de chatbot intelligent. Les résultats ont dépassé nos attentes."
+                    </p>
+                    <div class="flex mt-4 text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <img class="h-12 w-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client">
+                        <div>
+                            <h4 class="font-bold">Leila Trabelsi</h4>
+                            <p class="text-sm opacity-80">CEO, Startup Y</p>
+                        </div>
+                    </div>
+                    <p class="italic opacity-90">
+                        "L'équipe d'AiCraft Labs a fait preuve d'un professionnalisme remarquable dans le développement de notre moteur de recommandation. Un partenaire de confiance."
+                    </p>
+                    <div class="flex mt-4 text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-sm p-8 rounded-xl border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <img class="h-12 w-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/68.jpg" alt="Client">
+                        <div>
+                            <h4 class="font-bold">Karim Jridi</h4>
+                            <p class="text-sm opacity-80">Directeur Digital, Groupe Z</p>
+                        </div>
+                    </div>
+                    <p class="italic opacity-90">
+                        "Leur expertise en computer vision nous a permis d'automatiser notre processus de contrôle qualité avec une précision de 99%. Impressionnant!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-300">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-sm uppercase tracking-wider text-purple-600 font-bold">Contact</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Travaillons ensemble</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discutons de votre projet et voyons comment l'IA peut transformer votre entreprise.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-6">Envoyez-nous un message</h3>
+                    <form id="contact-form">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required>
+                                <option value="" disabled selected>Sélectionnez un sujet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="partnership">Partenariat</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-md font-medium transition">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm mb-8">
+                        <h3 class="text-xl font-bold mb-6">Nos coordonnées</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Adresse</h4>
+                                    <p class="text-gray-600">Rue de l'Innovation, Immeuble Technopole<br>5000 Monastir, Tunisie</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Téléphone</h4>
+                                    <p class="text-gray-600">+216 12 345 678</p>
+                                    <p class="text-gray-600">+216 98 765 432 (Urgences)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-cyan-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-cyan-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-600">contact@aicraftlabs.tn</p>
+                                    <p class="text-gray-600">commercial@aicraftlabs.tn</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horaires</h4>
+                                    <p class="text-gray-600">Lundi - Vendredi: 8h - 18h</p>
+                                    <p class="text-gray-600">Samedi: 9h - 13h</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="h-64 rounded-xl overflow-hidden shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.347377574428!2d10.8286093152385!3d35.76464498038318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130212d6d6f3a7a1%3A0x9aee6a1a664ef3b9!2sMonastir!5e0!3m2!1sfr!2stn!4v1623259657033!5m2!1sfr!2stn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Abonnez-vous à notre newsletter</h2>
+                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">Recevez les dernières actualités sur l'IA, nos cas d'utilisation et les opportunités de partenariat.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-900">
+                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-medium transition whitespace-nowrap">
+                        S'abonner
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center mr-2">
+                            <i class="fas fa-robot text-white text-sm"></i>
+                        </div>
+                        AiCraft Labs
+                    </h3>
+                    <p class="text-gray-400 mb-4">Consulting en intelligence artificielle basé à Monastir, Tunisie.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stratégie IA</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Data Science</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">NLP & Chatbots</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Computer Vision</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Formation IA</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Entreprise</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Équipe</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Carrières</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Légal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conditions générales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politique cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">&copy; 2023 AiCraft Labs. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <div class="floating-button">
+        <a href="#contact" class="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-xl transition">
+            <i class="fas fa-paper-plane text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-8 max-w-md mx-4">
+            <div class="text-center">
+                <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Message envoyé!</h3>
+                <p class="text-gray-600 mb-6">Nous avons bien reçu votre demande et vous contacterons dans les plus brefs délais.</p>
+                <button id="close-modal" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium transition">
+                    Fermer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        const successModal = document.getElementById('success-modal');
+        const closeModal = document.getElementById('close-modal');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to your server
+            // For this example, we'll just show the success modal
+            successModal.classList.remove('hidden');
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        closeModal.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
