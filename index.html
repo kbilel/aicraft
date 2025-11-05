@@ -64,6 +64,7 @@
                 <a href="#accueil" class="text-purple-600 font-medium hover:text-purple-800 transition">Accueil</a>
                 <a href="#services" class="text-gray-600 hover:text-purple-600 transition">Services</a>
                 <a href="#expertise" class="text-gray-600 hover:text-purple-600 transition">Expertise</a>
+                <a href="#projets" class="text-gray-600 hover:text-purple-600 transition">Projets</a>
                 <a href="#apropos" class="text-gray-600 hover:text-purple-600 transition">À propos</a>
                 <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
             </nav>
@@ -81,6 +82,7 @@
                 <a href="#accueil" class="text-purple-600 font-medium hover:text-purple-800 transition">Accueil</a>
                 <a href="#services" class="text-gray-600 hover:text-purple-600 transition">Services</a>
                 <a href="#expertise" class="text-gray-600 hover:text-purple-600 transition">Expertise</a>
+                <a href="#projets" class="text-gray-600 hover:text-purple-600 transition">Projets</a>
                 <a href="#apropos" class="text-gray-600 hover:text-purple-600 transition">À propos</a>
                 <a href="#contact" class="text-gray-600 hover:text-purple-600 transition">Contact</a>
                 <a href="tel:+21612345678" class="bg-purple-600 text-white px-4 py-2 rounded-md text-center font-medium hover:bg-purple-700 transition mt-2">
@@ -92,26 +94,111 @@
 
     <!-- Hero Section -->
     <section id="accueil" class="hero-gradient text-white">
-        <div class="container mx-auto px-4 py-24">
+        <div class="container mx-auto px-4 py-16 md:py-20">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Transformez votre entreprise avec <span class="gradient-text bg-white">l'IA</span>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        Nous concevons vos <span class="inline-block bg-white text-purple-700 px-2 py-1 rounded-md shadow-sm">agents IA</span>, prêts à déployer
                     </h1>
-                    <p class="text-xl md:text-2xl mb-8 opacity-90">
-                        AiCraft Labs vous accompagne dans votre transformation digitale grâce à des solutions d'intelligence artificielle sur mesure.
+                    <p class="text-lg md:text-xl mb-6 opacity-90">
+                        Agents IA clé en main, formations IA de qualité, et mise à disposition d’ingénieurs IA de haut niveau.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-md text-lg font-semibold transition flex items-center justify-center">
-                            <i class="fas fa-paper-plane mr-2"></i> Demander un devis
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-purple-600 px-7 py-3 rounded-md text-base md:text-lg font-semibold transition flex items-center justify-center">
+                            <i class="fas fa-robot mr-2"></i> Construire mon agent
                         </a>
-                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-md text-lg font-semibold transition flex items-center justify-center">
-                            <i class="fas fa-search mr-2"></i> Nos services
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-7 py-3 rounded-md text-base md:text-lg font-semibold transition flex items-center justify-center">
+                            <i class="fas fa-graduation-cap mr-2"></i> Formations & Staffing
                         </a>
+                    </div>
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+                        <div class="flex items-center bg-white/10 rounded-md px-3 py-2">
+                            <i class="fas fa-microchip text-white mr-2"></i>
+                            <span>Agents IA sur mesure</span>
+                        </div>
+                        <div class="flex items-center bg-white/10 rounded-md px-3 py-2">
+                            <i class="fas fa-chalkboard-teacher text-white mr-2"></i>
+                            <span>Formations IA (LangChain, LangGraph, MLOps)</span>
+                        </div>
+                        <div class="flex items-center bg-white/10 rounded-md px-3 py-2">
+                            <i class="fas fa-user-tie text-white mr-2"></i>
+                            <span>Ingénieurs IA en mission</span>
+                        </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2 flex justify-center">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IA et innovation" class="rounded-xl shadow-2xl max-w-full h-auto">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="IA et innovation" class="rounded-xl shadow-2xl max-w-md w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projets" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-sm uppercase tracking-wider text-purple-600 font-bold">Projets</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Projets & Réalisations</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Quelques applications et agents IA que nous avons conçus et livrés pour nos clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project: Wintijey -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="bg-white flex items-center justify-center h-40 p-4">
+                        <img src="https://www.wintijey.com/app/app/static/logo.png" alt="Wintijey" class="max-h-24 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Wintijey</h3>
+                        <p class="text-gray-600 mb-4">Application web grand public avec <strong>agent de matching</strong> qui relie les utilisateurs aux meilleures offres selon leur profil et leur contexte, pour maximiser l'engagement.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Web App</span>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Production</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">Tunisie</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Matching Agent</span>
+                        </div>
+                        <a href="https://www.wintijey.com/" target="_blank" rel="noopener" class="inline-flex items-center text-purple-600 font-semibold hover:underline">
+                            Visiter le site <i class="fas fa-arrow-up-right-from-square ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project: ForgeReel -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="h-40 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold tracking-wide">ForgeReel</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ForgeReel</h3>
+                        <p class="text-gray-600 mb-4">Agent IA pour générer des Reels/TikTok/Shorts à partir d'un simple prompt : script, voix‑off multi‑langues, sous‑titres, musique et montage automatiques.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">LLM Agents</span>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">LangChain</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Video</span>
+                        </div>
+                        <a href="https://forgereel.com/" target="_blank" rel="noopener" class="inline-flex items-center text-purple-600 font-semibold hover:underline">
+                            Voir le site <i class="fas fa-arrow-up-right-from-square ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project: Agent FinOps Cloud -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100">
+                    <div class="h-40 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                        <i class="fas fa-cloud text-white text-3xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Agent FinOps Cloud</h3>
+                        <p class="text-gray-600 mb-4">Agent agentique d'optimisation des coûts Cloud : analyse des factures, rightsizing, planification arrêt/démarrage, et recommandations compréhensibles en langage naturel.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">LangGraph</span>
+                            <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Agents</span>
+                            <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">FinOps</span>
+                        </div>
+                        <a href="#contact" class="inline-flex items-center text-purple-600 font-semibold hover:underline">
+                            Demander une démo <i class="fas fa-paper-plane ml-2 text-sm"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -432,7 +519,7 @@
                 <span class="text-sm uppercase tracking-wider text-purple-600 font-bold">Contact</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Travaillons ensemble</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Discutons de votre projet et voyons comment l'IA peut transformer votre entreprise.<br>
-<strong>Contact :</strong> <a href="mailto:contact@AicraftLabs.cloud" class="text-purple-600 hover:underline">contact@AicraftLabs.cloud</a></p>
+<strong>Contact :</strong> <a href="mailto:admin@AicraftLabs.cloud" class="text-purple-600 hover:underline">admin@AicraftLabs.cloud</a></p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -505,7 +592,6 @@
                                 <div>
                                     <h4 class="font-bold mb-1">Email</h4>
                                     <p class="text-gray-600">contact@aicraftlabs.cloud</p>
-                                    <p class="text-gray-600">commercial@aicraftlabs.cloud</p>
                                 </div>
                             </div>
                             
